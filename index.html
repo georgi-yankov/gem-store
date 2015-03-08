@@ -19,7 +19,7 @@
     <div class="list-group-item" ng-repeat="product in store.products">
       <h3>
         {{product.name}}
-        <a ng-click="store.deleteProduct(product.id)">Delete</a>
+        <button ng-click="store.deleteProduct(product.id)" class="btn btn-danger btn-sm">Delete</button>
         <em class="pull-right">{{product.price | currency}}</em>
       </h3>
 
