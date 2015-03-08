@@ -1,8 +1,8 @@
 <?php
 
-require 'includes/connection.php';
+require '../includes/connection.php';
 
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM `products`";
 $result = mysqli_query($connection, $sql);
 
 $outp = "[";
@@ -17,6 +17,7 @@ if (mysqli_num_rows($result) > 0) {
 
 		$outp .= '{"name":"' . $row["name"] . '",';
 		$outp .= '"description":"' . $row["description"] . '",';
+		$outp .= '"id":"' . $row["id"] . '",';
 		$outp .= '"shine":"' . $row["shine"] . '",';
 		$outp .= '"price":"' . $row["price"] . '",';
 		$outp .= '"rarity":"' . $row["rarity"] . '",';
